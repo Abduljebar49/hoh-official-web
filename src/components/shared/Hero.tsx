@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ExploreIcon, NextArrow, PrevArrow } from "../../assets/hero";
+import { NextArrow, PrevArrow } from "../../assets/hero";
 import Header from "./Header";
 
 const Hero = ({ slides }: any) => {

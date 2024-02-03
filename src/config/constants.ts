@@ -31,7 +31,7 @@ export interface HomeTshirtType {
 
 export const slides = [Img1, Img2, Img3];
 
-const sliderImages = ["1.jpg", "2.jpg", "3.jpg"];
+// const sliderImages = ["1.jpg", "2.jpg", "3.jpg"];
 
 export interface Product {
   image: any;
