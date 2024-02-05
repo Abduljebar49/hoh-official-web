@@ -7,7 +7,7 @@ const card = ({ ...product }: Product) => {
         <img
           src={product.image}
           alt="Image"
-          className="h-600 w-auto h-96 mb-6 hover:opacity-75 transition ease-in-out duration-500"
+          className="h-600 w-auto h-84 mb-6 hover:opacity-75 transition ease-in-out duration-500"
         />
         <div className="flex font-semibold text-gray-900 text-lg text-2xl mb-6">
           {product.title} <br />

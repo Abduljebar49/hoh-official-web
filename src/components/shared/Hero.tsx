@@ -56,7 +56,7 @@ const Hero = ({ slides }: any) => {
                       {" "}
                     </span>
                     <span className="text-white leading-0 lg:leading-[90px] lx:text-8xl lg:text-7xl md:text-6xl text-4xl font-black font-['Inter']    ">
-                      Engine oil exporter
+                      Engine oil 
                     </span>
                   </div>
                 </div>
