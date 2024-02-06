@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { NextArrow, PrevArrow } from "../../assets/hero";
-import Header from "./Header";
 
 const Hero = ({ slides }: any) => {
   let [current, setCurrent] = useState(0);
