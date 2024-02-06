@@ -39,7 +39,6 @@ const Hero = ({ slides }: any) => {
           style={heroStyle}
         >
           <div className="flex-col w-full justify-center container max-w-screen-xl mx-auto px-4 mb-20">
-            <Header isMain={true} />
             <div className="flex w-full justify-center lx:w-[80%] items-center justify-center text-center">
               <div className="flex flex-col w-full  lg:w-[60%] justify-center leading-4 md:px-0 px-0">
                 <div className="flex w-full justify-center xl:mt-40 lg:mt-40 md:mt-20 text-center md:px-10 lg:px-0 px-0 lx:px-0 mt-20 ">

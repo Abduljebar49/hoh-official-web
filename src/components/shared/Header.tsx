@@ -32,7 +32,7 @@ const Header = ({ isMain }: HeaderProps) => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mt-2 bg-white w-full transition-all ${
+      className={`sticky top-0 z-50 mt-2 px-10 bg-white w-full transition-all ${
         isSticky ? "h-auto" : "h-20"
       }`}
       style={{

@@ -1,11 +1,13 @@
 import { Moto } from "../assets/images";
 import Card from "../components/product/Card";
+import Header from "../components/shared/Header";
 import Hero from "../components/shared/Hero";
 import { Product, products, slides } from "../config/constants";
 
 const Home = () => {
   return (
     <>
+      <Header isMain={false} />
       <div className="flex-col w-full">
         <Hero slides={slides} />
       </div>

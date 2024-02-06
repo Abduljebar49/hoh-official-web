@@ -165,10 +165,10 @@ const Contact = () => {
               </div>
               <div className="flex flex-col p-4 border-1 border-black border rounded-lg w-full gap-3">
                 <div className="flex">
-                  <span className="text-red-400">Email : </span> Abd@gmail.com
+                  <span className="text-red-400">Email: </span>&nbsp; Abd@gmail.com
                 </div>
                 <div className="flex">
-                  <span className="text-red-400">Tel : </span>{" "}
+                  <span className="text-red-400">Tel: </span>&nbsp;
                   www.hohofficial.com
                 </div>
               </div>
