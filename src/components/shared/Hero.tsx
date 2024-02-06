@@ -24,10 +24,8 @@ const Hero = ({ slides }: any) => {
 
   const heroStyle = {
     width: "100%",
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slides[current]})`,
-    backgroundPosition: "center top",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundImage: ` url(${slides[current]})`,
+
   };
 
   return (
