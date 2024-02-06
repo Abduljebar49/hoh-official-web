@@ -56,7 +56,7 @@ const Hero = ({ slides }: any) => {
                       {" "}
                     </span>
                     <span className="text-white leading-0 lg:leading-[90px] lx:text-8xl lg:text-7xl md:text-6xl text-4xl font-black font-['Inter']    ">
-                      Engine oil 
+                      Engine oil
                     </span>
                   </div>
                 </div>
@@ -70,21 +70,21 @@ const Hero = ({ slides }: any) => {
                 </div>
               </div>
             </div>
+            <div className="flex w-full justify-center gap-5 mt-16 ">
+              {slides.map((_: any, i: number) => (
+                <div
+                  onClick={() => {
+                    setCurrent(i);
+                  }}
+                  key={i}
+                  className={`w-4 h-4 bg-white rounded-full  ${
+                    i === current ? "bg-white" : "bg-opacity-10 bg-gray-200"
+                  }`}
+                ></div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex gap-5 mt-16 mb-16">
-        {slides.map((_: any, i: number) => (
-          <div
-            onClick={() => {
-              setCurrent(i);
-            }}
-            key={i}
-            className={`w-4 h-4 bg-white rounded-full  ${
-              i === current ? "bg-white" : "bg-opacity-20 bg-gray-500"
-            }`}
-          ></div>
-        ))}
       </div>
     </>
   );

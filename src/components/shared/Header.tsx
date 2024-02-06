@@ -1,21 +1,47 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "../../assets/products";
 
 interface HeaderProps {
   isMain: boolean;
 }
+
 const Header = ({ isMain }: HeaderProps) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   const toggleShowMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY > 0 && !isSticky) {
+      setIsSticky(true);
+    } else if (window.scrollY === 0 && isSticky) {
+      setIsSticky(false);
+    }
+  };
+
+  // Add event listener for scroll
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isSticky]);
+
   return (
-    <>
-      <nav className="flex-wrap lg:flex items-center bg-transparent">
-        <div className="flex items-center mb-10 lg:mb-0">
-          <img src={Logo} className="w-20" alt="Logo" />
+    <header
+      className={`sticky top-0 z-50 mt-2 bg-white w-full transition-all ${
+        isSticky ? "h-auto" : "h-20"
+      }`}
+      style={{
+        boxShadow: isSticky ? "0 2px 4px rgba(0, 0, 0, 0.1)" : "none",
+      }}
+    >
+      <nav className="flex-wrap lg:flex items-center">
+        <div className="flex items-center mb-10 lg:mb-0 gap-5">
+          <img src={Logo} className="w-8 h-13" alt="Logo" />
           <div
             className={`lg:text-3xl md:text-2xl text-xl font-bold ${
               isMain ? "text-white" : "text-black"
@@ -25,15 +51,13 @@ const Header = ({ isMain }: HeaderProps) => {
           </div>
           <button
             className="cursor-pointer lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
-            onClick={() => toggleShowMenu()}
+            onClick={toggleShowMenu}
           >
-            <Link to={"/"}>
-              <img
-                className="cursor-pointer p-2"
-                src="assets/images/menu.png"
-                alt=""
-              />
-            </Link>
+            <img
+              className="cursor-pointer p-2"
+              src="assets/images/menu.png"
+              alt=""
+            />
           </button>
         </div>
 
@@ -70,7 +94,7 @@ const Header = ({ isMain }: HeaderProps) => {
           </Link>
         </div>
       </nav>
-    </>
+    </header>
   );
 };
 

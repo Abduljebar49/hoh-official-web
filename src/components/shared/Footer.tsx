@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { Logo } from "../../assets/products";
+import { fbIcon, instaIcon, tgIcon, xIcon } from "../../assets/shared";
 
 const Footer = () => {
   return (
@@ -18,27 +20,24 @@ const Footer = () => {
                 around the world
               </p>
 
-              <div className="flex items-center justify-center lg:justify-start space-x-5">
-                <a
-                  href="#"
-                  className="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500"
-                >
-                  <i data-feather="facebook"></i>
-                </a>
+              <div className="flex mt-3 w-full md:top-[239px] flex justify-start items-center gap-[17px] mx-auto">
+                <img
+                  className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
+                  src={instaIcon}
+                />
 
-                <a
-                  href="#"
-                  className="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500"
-                >
-                  <i data-feather="twitter"></i>
-                </a>
-
-                <a
-                  href="#"
-                  className="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500"
-                >
-                  <i data-feather="linkedin"></i>
-                </a>
+                <img
+                  className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
+                  src={xIcon}
+                />
+                <img
+                  className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
+                  src={fbIcon}
+                />
+                <img
+                  className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
+                  src={tgIcon}
+                />
               </div>
             </div>
 
@@ -59,18 +58,18 @@ const Footer = () => {
                 Company
               </h4>
 
-              <a
-                href="#"
+              <Link
+                to={'/about'}
                 className="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
               >
                 About Us
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to={'/contact'}
                 className="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
 
             <div className="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
