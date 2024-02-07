@@ -29,6 +29,10 @@ export interface HomeTshirtType {
   title: string;
 }
 
+export const heroImage = Img1;
+
+export const phoneNumber = "+251 97 431 1111"
+
 export const slides = [Img1, Img2, Img3];
 
 // const sliderImages = ["1.jpg", "2.jpg", "3.jpg"];
@@ -52,7 +56,7 @@ export let tgLink = `https://t.me/hohlubricant`;
 
 
 
-const location = "Dire Dhawa";
+const location = "";
 export const products: Product[] = [
   {
     image: ATF,

@@ -43,7 +43,7 @@ const Header = ({ isMain }: HeaderProps) => {
         <div className="flex items-center mb-10 lg:mb-0 gap-5">
           <img src={Logo} className="w-8 h-13" alt="Logo" />
           <div
-            className={`lg:text-3xl md:text-2xl text-xl font-bold ${
+            className={`cursor-pointer lg:text-3xl md:text-2xl text-xl font-bold ${
               isMain ? "text-white" : "text-black"
             }`}
           >

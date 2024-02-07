@@ -1,6 +1,7 @@
 import PageHeader from "../components/product/PageHeader";
 import Header from "../components/shared/Header";
 import SocialMediaLinks from "../components/shared/SocialMediaLinks";
+import { phoneNumber } from "../config/constants";
 
 const Contact = () => {
   return (
@@ -156,20 +157,25 @@ const Contact = () => {
             </div>
             <div className="flex flex-col lg:w-1/3 w-full gap-10">
               <div className="flex flex-col p-4 border-1 border-black border rounded-lg w-full gap-4">
-                <p className="text-xl font-bold text-red-400">Dire Dhawa</p>
+                <p className="text-xl font-bold text-red-400">Ethiopia</p>
                 <div className="flex flex-col gap-2">
                   <p>Address 1</p>
                   <p>Address 2</p>
-                  <p>TEL: +251-921-859-449</p>
+                  <p>TEL: {phoneNumber}</p>
                 </div>
               </div>
               <div className="flex flex-col p-4 border-1 border-black border rounded-lg w-full gap-3">
                 <div className="flex">
-                  <span className="text-red-400">Email: </span>&nbsp; Abd@gmail.com
+                  <span className="text-red-400">Email: </span>&nbsp;
+                  Abd@gmail.com
                 </div>
                 <div className="flex">
                   <span className="text-red-400">Tel: </span>&nbsp;
-                  www.hohofficial.com
+                  {phoneNumber}
+                </div>
+                <div className="flex">
+                  <span className="text-red-400">Website: </span>&nbsp;
+                  www.hohlubricant.com
                 </div>
               </div>
             </div>

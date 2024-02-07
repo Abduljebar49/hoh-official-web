@@ -2,6 +2,7 @@ import { Moto } from "../assets/images";
 import Card from "../components/product/Card";
 import Header from "../components/shared/Header";
 import Hero from "../components/shared/Hero";
+import Slider from "../components/shared/Slider";
 import { Product, products, slides } from "../config/constants";
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Slider />
       <section className="bg-white py-20">
         <div className="container max-w-screen-xl mx-auto px-4">
           <h1 className="font-semibold text-gray-900 text-xl md:text-4xl text-center mb-16">
@@ -45,12 +47,6 @@ const Home = () => {
               <Card {...ele} key={index}></Card>
             ))}
           </div>
-
-          {/* <div className="flex items-center justify-center">
-            <button className="px-7 py-5 font-semibold bg-gray-100 text-gray-900 rounded-2xl hover:bg-gray-300 hover:text-gray-600 transition ease-in-out duration-500">
-              More products
-            </button>
-          </div> */}
         </div>
       </section>
     </>

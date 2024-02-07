@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../components/shared/Footer";
+import { Footer } from "../components/shared/Footer";
+import ScrollToTopOnMount from "../components/shared/ScrollToTop";
 
 const Layout = () => {
-
   return (
     <>
       <div className="max-w-screen mx-auto">
+        <ScrollToTopOnMount />
         <div className="">
           <Outlet />
         </div>
