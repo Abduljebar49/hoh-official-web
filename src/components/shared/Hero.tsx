@@ -25,7 +25,9 @@ const Hero = ({ slides }: any) => {
   const heroStyle = {
     width: "100%",
     backgroundImage: ` url(${slides[current]})`,
-
+    backgroundPosition: "center top",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   };
 
   return (

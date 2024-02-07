@@ -37,18 +37,49 @@ export interface Product {
   image: any;
   description: string;
   title: string;
-  price: number;
+  price?: number;
   location?: string;
+  benefits: string[];
+  extra?: string;
+  generalProfile: string;
+  meetsExceeds: string;
+  usage?: string;
 }
+
+const sample = `
+﻿
+﻿
+
+GENERAL PROFILE:
+HOH SAE 20W-50 API SL car motor oils designed for gasoline powered passenger cars engines of light duty vehicles. These are blended using good quality base oils and performance additives to ensure better engine protection. HOH is developed to exceed the performance requirements of API (American Petroleum Institute) SL.
+MEETS & EXCEEDS:
+API: SL, ACEA A3/B3-04, MB 229.1, VW 502 00/505 00
+FEATURES & BENEFITS:
+SAE 20W
+1-Good thermo-oxidative stability minimises deposits & sludge build-up. API:
+2-Effective rust inhibitors retard formation of rust in critical engine parts.
+3-Better anti wear technology minimises engine wear & reduces maintenance costs. 
+4-Good Stay-in-grade performance ensures reliable
+lubrication even at higher load & operating temperatures
+`;
 
 const location = "Dire Dhawa";
 export const products: Product[] = [
   {
     image: ATF,
+
     title: "HOH 1L DEXRONII 3D",
     description: "this is description",
-    price: 2300,
+    generalProfile: `HOH ATF DEXRON II can be used in cars, commercial vehicles, construction machinery and boats. The product has a wide range of applications in automatic gearboxes both with and without torque converter, for power steering, in gears or, depending on manufacturer, in hydraulic systems.
+    `,
     location: location,
+    benefits: [
+      "1-Enhanced friction durability prolongs transmission life and promotes smooth shifting. ",
+      "2-Increased resistance to oil oxidation and degradation.",
+      "3-Increased clutch band and clutch pack capacity.",
+      "4-Improved protection of copper and bronze components",
+    ],
+    meetsExceeds: `DEXRON II, Ford Mercon, Allison C-4, GM Dex II`,
   },
   {
     image: Hydraulic,
@@ -56,6 +87,21 @@ export const products: Product[] = [
     description: "this is description",
     price: 2300,
     location: location,
+    meetsExceeds: "ISO VG, Denisam HF-01/HF-2, HF-0, DIN 51524 and Part 2",
+    generalProfile: `HOH ISO VG 46 is designed to give excellent hydraulic pump protection. They are formulated with refined paraffinic base oils.
+    They provide excellent anti-wear protection, oxidation and corrosion inhibition, as well as foam and aeration suppression. They have excellent demulsibility characteristics.
+    `,
+    usage: `HOH Hydraulic Oils are versatile lubricants available in ISO viscosity grades are most commonly used for hydraulics with vane-, piston-, or gear-type pumps, especially where pressures exceed 1000 psi. They can also be used to lubricate lightly loaded reciprocating compressors.`,
+    benefits: [
+      "1-Excellent Low Temperature Properties.",
+      "2-Stable Viscosity Friction.",
+      "3-Good Rust and Corrosion.",
+      "4-Protection Resists Foaming in Service.",
+      "5-Modified for added Lubricity.",
+      "6-Excellent Water Separation.",
+      "7-Excellent Hydrolytic Stability.",
+      "8-Excellent Thermal Stability.",
+    ],
   },
   {
     image: Hydraulic68,
@@ -63,6 +109,23 @@ export const products: Product[] = [
     description: "this is description",
     price: 2300,
     location: location,
+    meetsExceeds: "ISO VG, Denisam HF-01/HF-2, HF-0, DIN 51524 and Part 2",
+    generalProfile: `
+    HOH ISO VG 68 is designed to give excellent hydraulic pump protection. They are formulated with refined paraffinic base oils.
+They provide excellent anti-wear protection, oxidation and corrosion inhibition, as well as foam and aeration suppression. They have excellent demulsibility characteristics.
+
+    `,
+    usage: `HOH Hydraulic Oils are versatile lubricants available in ISO viscosity grades are most commonly used for hydraulics with vane-, piston-, or gear-type pumps, especially where pressures exceed 1000 psi. They can also be used to lubricate lightly loaded reciprocating compressors.`,
+    benefits: [
+      "1-Excellent Low Temperature Properties.",
+      "2-Stable Viscosity Friction.",
+      "3-Good Rust and Corrosion.",
+      "4-Protection Resists Foaming in Service.",
+      "5-Modified for added Lubricity.",
+      "6-Excellent Water Separation.",
+      "7-Excellent Hydrolytic Stability.",
+      "8-Excellent Thermal Stability.",
+    ],
   },
   {
     image: DisselEngine,
@@ -70,6 +133,17 @@ export const products: Product[] = [
     description: "this is description",
     price: 2300,
     location: location,
+    generalProfile: `HOH SAE 15W-40 API CI-4 engine oils designed for diesel powered passenger cars engines of heavy duty vehicles. These are blended using good quality base oils and performance additives to ensure better engine protection. HOH is developed to exceed the performance requirements of API (American Petroleum Institute) CI-4. 
+    `,
+    benefits: [
+      "1-Good thermo-oxidative stability minimises deposits & sludge build-up. API: C",
+      "2-Effective rust inhibitors retard formation of rust in critical engine parts.",
+      "3-Better anti wear technology minimises engine wear & reduces maintenance costs.",
+      "4-Good Stay-in-grade performance ensures reliable",
+    ],
+    meetsExceeds: `API: CI-4, ACEA A3/B3, E4-08, MB 228.3, CUMMINS
+    CES 20074`,
+    extra: `lubrication even at higher load & operating temperatures`,
   },
 
   {
@@ -78,6 +152,15 @@ export const products: Product[] = [
     description: "this is description",
     price: 2300,
     location: location,
+    benefits: [
+      "1-Good thermo-oxidative stability minimises deposits & sludge build-up. API:",
+      "2-Effective rust inhibitors retard formation of rust in critical engine parts.",
+      "3-Better anti wear technology minimises engine wear & reduces maintenance costs. ",
+      "4-Good Stay-in-grade performance ensures reliable",
+    ],
+    meetsExceeds: `API: SL, ACEA A3/B3-04, MB 229.1, VW 502 00/505 00`,
+    generalProfile: `HOH SAE 20W-50 API SL car motor oils designed for gasoline powered passenger cars engines of light duty vehicles. These are blended using good quality base oils and performance additives to ensure better engine protection. HOH is developed to exceed the performance requirements of API (American Petroleum Institute) SL.
+    `,
   },
   {
     image: EngineOil,
@@ -85,5 +168,18 @@ export const products: Product[] = [
     description: "this is description",
     price: 2300,
     location: location,
+    generalProfile: `HOH SAE 15W-40 API CI-4 engine oils designed for 
+    diesel powered passenger cars engines of heavy duty vehicles. 
+    These are blended using good quality base oils and 
+    performance additives to ensure better engine protection. 
+    HOH is developed to exceed the performance requirements of API (American Petroleum Institute) CI-4. `,
+    meetsExceeds: "API: CI-4, ACEA E4-08, A3/B3, MB 228.3,CUMMINS CES 20071",
+    benefits: [
+      "1-Good thermo-oxidative stability minimises deposits & sludge build-up. API: CI-4",
+      " 2-Effective rust inhibitors retard formation of rust in critical engine parts.",
+      "3-Better anti wear technology minimises engine wear & reduces maintenance costs.",
+      "4-Good Stay-in-grade performance ensures reliable",
+    ],
+    extra: "lubrication even at higher load & operating temperatures",
   },
 ];
