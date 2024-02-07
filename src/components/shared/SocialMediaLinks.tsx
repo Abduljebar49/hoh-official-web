@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaTelegram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaTelegram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { fbLink, tgLink } from "../../config/constants";
 
