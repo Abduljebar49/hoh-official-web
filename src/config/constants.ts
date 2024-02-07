@@ -34,6 +34,7 @@ export const slides = [Img1, Img2, Img3];
 // const sliderImages = ["1.jpg", "2.jpg", "3.jpg"];
 
 export interface Product {
+  id:number;
   image: any;
   description: string;
   title: string;
@@ -46,28 +47,16 @@ export interface Product {
   usage?: string;
 }
 
-const sample = `
-﻿
-﻿
+export let fbLink = `https://www.facebook.com/profile.php?id=61556431674228&mibextid=ZbWKwL`;
+export let tgLink = `https://t.me/hohlubricant`;
 
-GENERAL PROFILE:
-HOH SAE 20W-50 API SL car motor oils designed for gasoline powered passenger cars engines of light duty vehicles. These are blended using good quality base oils and performance additives to ensure better engine protection. HOH is developed to exceed the performance requirements of API (American Petroleum Institute) SL.
-MEETS & EXCEEDS:
-API: SL, ACEA A3/B3-04, MB 229.1, VW 502 00/505 00
-FEATURES & BENEFITS:
-SAE 20W
-1-Good thermo-oxidative stability minimises deposits & sludge build-up. API:
-2-Effective rust inhibitors retard formation of rust in critical engine parts.
-3-Better anti wear technology minimises engine wear & reduces maintenance costs. 
-4-Good Stay-in-grade performance ensures reliable
-lubrication even at higher load & operating temperatures
-`;
+
 
 const location = "Dire Dhawa";
 export const products: Product[] = [
   {
     image: ATF,
-
+    id:1,
     title: "HOH 1L DEXRONII 3D",
     description: "this is description",
     generalProfile: `HOH ATF DEXRON II can be used in cars, commercial vehicles, construction machinery and boats. The product has a wide range of applications in automatic gearboxes both with and without torque converter, for power steering, in gears or, depending on manufacturer, in hydraulic systems.
@@ -82,6 +71,7 @@ export const products: Product[] = [
     meetsExceeds: `DEXRON II, Ford Mercon, Allison C-4, GM Dex II`,
   },
   {
+    id:2,
     image: Hydraulic,
     title: "HOH 20L VG46 20L",
     description: "this is description",
@@ -104,6 +94,7 @@ export const products: Product[] = [
     ],
   },
   {
+    id:3,
     image: Hydraulic68,
     title: "HOH 20L VG68 20L",
     description: "this is description",
@@ -128,6 +119,7 @@ They provide excellent anti-wear protection, oxidation and corrosion inhibition,
     ],
   },
   {
+    id:4,
     image: DisselEngine,
     title: "SAE 15W-40 25L",
     description: "this is description",
@@ -145,8 +137,8 @@ They provide excellent anti-wear protection, oxidation and corrosion inhibition,
     CES 20074`,
     extra: `lubrication even at higher load & operating temperatures`,
   },
-
   {
+    id:5,
     image: Gassoline,
     title: "HOH 4L 20W-50 SL 3D",
     description: "this is description",
@@ -163,6 +155,7 @@ They provide excellent anti-wear protection, oxidation and corrosion inhibition,
     `,
   },
   {
+    id:6,
     image: EngineOil,
     title: "HOH 1L 15W-40 3D",
     description: "this is description",

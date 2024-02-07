@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Logo } from "../../assets/products";
 import { fbIcon, instaIcon, tgIcon, xIcon } from "../../assets/shared";
+import { fbLink, tgLink } from "../../config/constants";
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
                 around the world
               </p>
 
-              <div className="flex mt-3 w-full md:top-[239px] flex justify-start items-center gap-[17px] mx-auto">
+              <div className="flex mt-3 w-full md:top-[239px] flex justify-center items-center gap-[17px] mx-auto">
                 <img
                   className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
                   src={instaIcon}
@@ -30,14 +31,18 @@ const Footer = () => {
                   className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
                   src={xIcon}
                 />
-                <img
-                  className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
-                  src={fbIcon}
-                />
-                <img
-                  className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
-                  src={tgIcon}
-                />
+                <Link target="_blank" rel="noopener noreferrer" to={fbLink}>
+                  <img
+                    className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
+                    src={fbIcon}
+                  />
+                </Link>
+                <Link target="_blank" rel="noopener noreferrer" to={tgLink}>
+                  <img
+                    className="w-[24px] h-[24px] mix-blend-luminosity rounded-full"
+                    src={tgIcon}
+                  />
+                </Link>
               </div>
             </div>
 

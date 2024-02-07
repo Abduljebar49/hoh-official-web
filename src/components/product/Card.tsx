@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Product } from "../../config/constants";
 
 const card = ({ ...product }: Product) => {
@@ -18,9 +19,15 @@ const card = ({ ...product }: Product) => {
         <p className="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10">
           {product.description}
         </p>
-        <button className="w-full py-4 bg-info font-semibold text-white text-lg rounded-xl bg-blue-800 transition ease-in-out duration-500 my-2">
-          Buy
-        </button>
+
+        <Link
+          className="flex w-full justify-center items-center"
+          to={`/product/${product.id}`}
+        >
+          <div className="flex w-full justify-center py-4 bg-info font-semibold text-white text-lg rounded-xl bg-blue-800 transition ease-in-out duration-500 my-2">
+            Read More...
+          </div>
+        </Link>
       </div>
     </>
   );

@@ -80,14 +80,29 @@ const Header = ({ isMain }: HeaderProps) => {
           >
             <Link to="/about">About us</Link>
           </li>
+          {
+            showMenu && (
+              <li
+                className={`font-semibold hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
+                  isMain ? "text-white" : "text-black"
+                }`}
+              >
+                <Link to="/contact">Contact us</Link>
+              </li>
+            )
+          }
         </ul>
 
-        <div className="lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 gap-6">
+        <div className={`lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 gap-6`}>
           <Link
             to="/contact"
-            className={`px-6 py-4 border-2 border-blue-500 font-semibold text-lg rounded-xl hover:bg-blue-700 transition ease-linear duration-500 ${
+            className={`lg:inline hidden px-6 py-4 border-2 border-blue-500 font-semibold text-lg rounded-xl hover:bg-blue-700 transition ease-linear duration-500 ${
               isMain ? "text-white" : "text-blue-500"
-            }`}
+            }
+              ${
+                showMenu? "inline": ""
+              }
+            `}
             style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
           >
             Contact Us
