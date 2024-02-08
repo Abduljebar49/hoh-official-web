@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NextArrow, PrevArrow } from "../../assets/hero";
 import { heroImage } from "../../config/constants";
+import { HeroBg } from "../../assets/images";
 
 const Hero = ({ slides }: any) => {
   let [current, setCurrent] = useState(0);
@@ -25,7 +26,7 @@ const Hero = ({ slides }: any) => {
 
   const heroStyle = {
     width: "100%",
-    backgroundImage: ` url(${heroImage})`,
+    backgroundImage: ` url(${HeroBg})`,
     backgroundPosition: "center top",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -35,7 +36,7 @@ const Hero = ({ slides }: any) => {
     <>
       <div className="flex flex-col w-full jusify-center -pt-40">
         <div
-          className="flex h-screen flex-col w-full bg-white justify-center inline-flex"
+          className="flex lg:h-screen h-full flex-col w-full bg-white justify-center inline-flex"
           style={heroStyle}
         >
           <div className="flex-col w-full justify-center container max-w-screen-xl mx-auto px-4 mb-20">
