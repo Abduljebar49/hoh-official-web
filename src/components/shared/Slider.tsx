@@ -35,7 +35,7 @@ const Slider = () => {
     <>
       <div className="flex flex-col w-full jusify-center -pt-40">
         <div
-          className="flex flex-col h-screen w-full bg-white justify-center inline-flex"
+          className="flex flex-col lg:h-screen h-full w-full bg-white justify-center inline-flex"
           style={heroStyle}
         >
           <div className="flex-col w-full justify-center container max-w-screen-xl mx-auto px-4 mb-20">
