@@ -25,17 +25,17 @@ const Hero = ({ slides }: any) => {
 
   const heroStyle = {
     width: "100%",
-    backgroundImage: ` url(${HeroBg})`,
+    backgroundImage: `url(${HeroBg})`,
     backgroundPosition: "center top",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "100% auto",
   };
 
   return (
     <>
       <div className="flex flex-col w-full jusify-center -pt-40">
         <div
-          className="flex lg:h-screen min-h-[500px] h-full flex-col w-full bg-white justify-center inline-flex"
+          className="flex lg:h-screen h-full flex-col w-full bg-white justify-center inline-flex"
           style={heroStyle}
         >
           <div className="flex-col w-full justify-center container max-w-screen-xl mx-auto px-4 mb-20">

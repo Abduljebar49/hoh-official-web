@@ -36,33 +36,29 @@ const Header = ({ isMain }: HeaderProps) => {
       className={`sticky uppercase top-0 z-50 px-10 bg-primary w-full h-full transition-all justify-between md:justify-center items-center ${
         isSticky ? "h-auto" : "h-28"
       }
-        ${
-          showMenu ? "h-64" : ""
-        }
+        ${showMenu ? "h-64" : ""}
       `}
       style={{
         boxShadow: isSticky ? "0 2px 4px rgba(0, 0, 0, 0.1)" : "none",
       }}
     >
-      <nav className="flex sm:flex-row flex-col items-center justify-between w-full h-full">
-        <div className="flex items-center lg:mb-0 gap-5 h-full">
-          <img src={Logo} className="w-8 h-13" alt="Logo" />
-          <div
-            className={`cursor-pointer lg:text-3xl md:text-2xl text-xl text-white font-bold ${
-              isMain ? "text-white" : "text-black"
-            }`}
-          >
-            HOH Engine Oil
+      <nav className="flex sm:flex-row flex-col items-center justify-center w-full h-full">
+        <div className="flex items-center lg:w-96 w-full justify-between lg:mb-0 gap-5 h-full">
+          <div className="flex items-center gap-4">
+            <img src={Logo} className="w-8 h-13" alt="Logo" />
+            <div
+              className={`cursor-pointer lg:text-3xl md:text-2xl text-xl text-white font-bold ${
+                isMain ? "text-white" : "text-black"
+              }`}
+            >
+              HOH Engine Oil
+            </div>
           </div>
           <button
             className="cursor-pointer lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
             onClick={toggleShowMenu}
           >
-            <img
-              className="cursor-pointer p-2"
-              src={Menu}
-              alt=""
-            />
+            <img className="cursor-pointer p-2" src={Menu} alt="" />
           </button>
         </div>
 
@@ -85,28 +81,26 @@ const Header = ({ isMain }: HeaderProps) => {
           >
             <Link to="/about">About us</Link>
           </li>
-          {
-            showMenu && (
-              <li
-                className={`font-semibold text-white transition ease-in-out duration-300  ${
-                  isMain ? "text-white" : "text-black"
-                }`}
-              >
-                <Link to="/contact">Contact us</Link>
-              </li>
-            )
-          }
+          {showMenu && (
+            <li
+              className={`font-semibold text-white transition ease-in-out duration-300  ${
+                isMain ? "text-white" : "text-black"
+              }`}
+            >
+              <Link to="/contact">Contact us</Link>
+            </li>
+          )}
         </ul>
 
-        <div className={`lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 gap-6`}>
+        <div
+          className={`lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 gap-6`}
+        >
           <Link
             to="/contact"
             className={`lg:inline hidden px-6 py-4 border-2 border-white-500 text-white font-semibold text-lg rounded-xl hover:bg-white-700 transition ease-linear duration-500 ${
               isMain ? "text-white" : "text-white-500"
             }
-              ${
-                showMenu? "inline": ""
-              }
+              ${showMenu ? "inline" : ""}
             `}
           >
             Contact Us
