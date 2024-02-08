@@ -33,7 +33,7 @@ const Header = ({ isMain }: HeaderProps) => {
 
   return (
     <header
-      className={`sticky uppercase top-0 z-50 px-10 bg-primary w-full h-full transition-all justify-between md:justify-center items-center ${
+      className={`sticky uppercase top-0 z-50 lg:px-10 p-2 bg-primary w-full h-full transition-all justify-between md:justify-center items-center ${
         isSticky ? "h-auto" : "h-28"
       }
         ${showMenu ? "h-64" : ""}
