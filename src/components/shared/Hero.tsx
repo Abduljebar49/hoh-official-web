@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { NextArrow, PrevArrow } from "../../assets/hero";
-import { heroImage } from "../../config/constants";
 import { HeroBg } from "../../assets/images";
 
 const Hero = ({ slides }: any) => {
