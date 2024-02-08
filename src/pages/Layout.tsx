@@ -5,7 +5,7 @@ import ScrollToTopOnMount from "../components/shared/ScrollToTop";
 const Layout = () => {
   return (
     <>
-      <div className="max-w-screen mx-auto">
+      <div className="max-w-screen mx-auto bg-primary">
         <ScrollToTopOnMount />
         <div className="">
           <Outlet />

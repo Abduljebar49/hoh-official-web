@@ -31,7 +31,12 @@ export interface HomeTshirtType {
 
 export const heroImage = Img1;
 
-export const phoneNumber = "+251 97 431 1111"
+export const phoneNumber =[ 
+  "+251 97 431 1111",
+  "+251 97 432 2222",
+  "+251 97 243 3333",
+  "+251 97 234 3333",
+]
 
 export const slides = [Img1, Img2, Img3];
 

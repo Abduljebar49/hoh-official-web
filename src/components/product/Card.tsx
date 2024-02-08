@@ -10,13 +10,13 @@ const card = ({ ...product }: Product) => {
           alt="Image"
           className="h-600 w-auto h-72 mb-6 hover:opacity-75 transition ease-in-out duration-500"
         />
-        <div className="flex font-semibold text-gray-900 text-lg text-2xl mb-6">
+        <div className="flex font-semibold text-white text-lg text-2xl mb-6">
           {product.title} <br />
         </div>
 
         <div className="text-xl">{product.location}</div>
 
-        <p className="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10">
+        <p className="font-light text-white text-sm md:text-md lg:text-lg mb-10">
           {product.description}
         </p>
 

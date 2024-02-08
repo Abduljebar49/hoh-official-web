@@ -12,14 +12,14 @@ const Home = () => {
       <div className="flex-col w-full">
         <Hero slides={slides} />
       </div>
-      <div className="flex container max-w-screen-xl mx-auto px-4">
+      <div className="flex container max-w-screen-xl mx-auto px-4 pb-16">
         <div className="flex flex-col lg:flex-row justify-between items-center">
-          <div className="text-center lg:text-left mt-40 md:px-10 px-0">
-            <div className="font-semibold text-gray-900 text-2xl md:text-6xl leading-normal mb-6">
+          <div className="text-white text-center lg:text-left mt-40 md:px-10 px-0">
+            <div className="font-semibold text-2xl md:text-6xl leading-normal mb-6">
               Engine Oil gas for better future of your engine
             </div>
 
-            <p className="font-light text-gray-400 text-md md:text-lg leading-normal mb-12">
+            <p className="font-light text-md md:text-lg leading-normal mb-12">
               We provide a trusted products for engines of
               <br />
               worldwide to support people and organizers
@@ -36,9 +36,9 @@ const Home = () => {
         </div>
       </div>
       <Slider />
-      <section className="bg-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="container max-w-screen-xl mx-auto px-4">
-          <h1 className="font-semibold text-gray-900 text-xl md:text-4xl text-center mb-16">
+          <h1 className="font-semibold text-white text-xl md:text-4xl text-center mb-16">
             Latest products
           </h1>
 

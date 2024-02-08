@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "../../assets/products";
+import { Menu } from "../../assets/images";
 
 interface HeaderProps {
   isMain: boolean;
@@ -32,18 +33,22 @@ const Header = ({ isMain }: HeaderProps) => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mt-2 px-10 bg-white w-full transition-all ${
-        isSticky ? "h-auto" : "h-20"
-      }`}
+      className={`sticky uppercase top-0 z-50 px-10 bg-primary w-full h-full transition-all justify-between md:justify-center items-center ${
+        isSticky ? "h-auto" : "h-28"
+      }
+        ${
+          showMenu ? "h-64" : ""
+        }
+      `}
       style={{
         boxShadow: isSticky ? "0 2px 4px rgba(0, 0, 0, 0.1)" : "none",
       }}
     >
-      <nav className="flex-wrap lg:flex items-center">
-        <div className="flex items-center mb-10 lg:mb-0 gap-5">
+      <nav className="flex sm:flex-row flex-col items-center justify-between w-full h-full">
+        <div className="flex items-center lg:mb-0 gap-5 h-full">
           <img src={Logo} className="w-8 h-13" alt="Logo" />
           <div
-            className={`cursor-pointer lg:text-3xl md:text-2xl text-xl font-bold ${
+            className={`cursor-pointer lg:text-3xl md:text-2xl text-xl text-white font-bold ${
               isMain ? "text-white" : "text-black"
             }`}
           >
@@ -55,7 +60,7 @@ const Header = ({ isMain }: HeaderProps) => {
           >
             <img
               className="cursor-pointer p-2"
-              src="assets/images/menu.png"
+              src={Menu}
               alt=""
             />
           </button>
@@ -67,14 +72,14 @@ const Header = ({ isMain }: HeaderProps) => {
           }`}
         >
           <li
-            className={`font-semibold hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
+            className={`font-semibold text-white hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
               isMain ? "text-white" : "text-black"
             }`}
           >
             <Link to="/">Home</Link>
           </li>
           <li
-            className={`font-semibold hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
+            className={`font-semibold text-white hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
               isMain ? "text-white" : "text-black"
             }`}
           >
@@ -83,7 +88,7 @@ const Header = ({ isMain }: HeaderProps) => {
           {
             showMenu && (
               <li
-                className={`font-semibold hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
+                className={`font-semibold text-white transition ease-in-out duration-300  ${
                   isMain ? "text-white" : "text-black"
                 }`}
               >
@@ -96,14 +101,13 @@ const Header = ({ isMain }: HeaderProps) => {
         <div className={`lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 gap-6`}>
           <Link
             to="/contact"
-            className={`lg:inline hidden px-6 py-4 border-2 border-blue-500 font-semibold text-lg rounded-xl hover:bg-blue-700 transition ease-linear duration-500 ${
-              isMain ? "text-white" : "text-blue-500"
+            className={`lg:inline hidden px-6 py-4 border-2 border-white-500 text-white font-semibold text-lg rounded-xl hover:bg-white-700 transition ease-linear duration-500 ${
+              isMain ? "text-white" : "text-white-500"
             }
               ${
                 showMenu? "inline": ""
               }
             `}
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
           >
             Contact Us
           </Link>

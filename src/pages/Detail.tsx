@@ -10,7 +10,7 @@ const Detail = () => {
   return (
     <>
       <Header isMain={false} />
-      <div className="flex w-full container max-w-screen-xl mx-auto px-4 mb-20">
+      <div className="flex w-full container max-w-screen-xl mx-auto px-4 mb-20 text-white">
         <div className="flex flex-col w-full justify-center">
           <div className="flex justify-center w-full ">
             <img className="p-4 my-10 rounded-lg" src={product.image} alt="" />
