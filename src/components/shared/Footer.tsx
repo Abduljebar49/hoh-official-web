@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../../assets/products";
 import { phoneNumber } from "../../config/constants";
 import SocialMediaLinks from "./SocialMediaLinks";
+import { LogoN } from "../../assets/shared";
 
 export const Footer = () => {
   let date = new Date().getFullYear();
@@ -24,12 +24,12 @@ export const Footer = () => {
             to={"/home"}
             aria-label="Go home"
             title="Company"
-            className="inline-flex flex-col lg:flex-row gap-4 items-center"
+            className="inline-flex flex-col gap-4 items-center"
           >
-            <div className="flex lg:w-8 w-full lg:justify-start justify-center lg:justify-start">
-              <img src={Logo} className="w-8 h-13" alt="Logo" />
+            <div className="flex w-full lg:justify-start justify-center lg:justify-start">
+              <img src={LogoN} className="w-32 h-24" alt="Logo" />
             </div>
-            <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase text-white">
+            <span className="flex w-full lg:justify-start justify-center ml-2 text-xl font-bold tracking-wide text-white uppercase text-white">
               HOH Engine Oil
             </span>
           </Link>

@@ -11,6 +11,9 @@ import coopIcon from "./coop.svg";
 
 import CartIcon2 from "./cart.svg";
 
+import LogoO from "./logo_o.png";
+import LogoN from "./logo_n.png";
+
 export {
   SearchIcon,
   fbIcon,
@@ -21,5 +24,7 @@ export {
   telebirrIcon,
   chapaIcon,
   coopIcon,
-  CartIcon2
+  CartIcon2,
+  LogoO,
+  LogoN
 };

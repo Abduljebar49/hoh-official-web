@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Logo } from "../../assets/products";
 import { Menu } from "../../assets/images";
+import { LogoO } from "../../assets/shared";
 
 interface HeaderProps {
   isMain: boolean;
@@ -45,7 +45,7 @@ const Header = ({ isMain }: HeaderProps) => {
       <nav className="flex sm:flex-row flex-col items-center justify-center w-full h-full">
         <div className="flex items-center lg:w-96 w-full justify-between lg:mb-0 gap-5 h-full">
           <div className="flex items-center gap-4">
-            <img src={Logo} className="w-8 h-13" alt="Logo" />
+            <img src={LogoO} className="w-8 h-13" alt="Logo" />
             <div
               className={`cursor-pointer lg:text-3xl md:text-2xl text-xl text-white font-bold ${
                 isMain ? "text-white" : "text-black"
