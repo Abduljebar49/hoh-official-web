@@ -1,6 +1,6 @@
-import { FaFacebook, FaTwitter, FaTelegram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { fbLink, tgLink } from "../../config/constants";
+import { fbLink, tgLink, whatappLink } from "../../config/constants";
 
 const SocialMediaLinks = () => {
   return (
@@ -28,6 +28,14 @@ const SocialMediaLinks = () => {
         className="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-2 transition duration-300"
       >
         <FaTelegram />
+      </Link>
+      <Link
+        target="_blank"
+        to={whatappLink}
+        rel="noopener noreferrer"
+        className="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-2 transition duration-300"
+      >
+        <FaWhatsapp />
       </Link>
     </div>
   );

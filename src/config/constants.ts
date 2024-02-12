@@ -58,6 +58,7 @@ export interface Product {
 
 export let fbLink = `https://www.facebook.com/profile.php?id=61556431674228&mibextid=ZbWKwL`;
 export let tgLink = `https://t.me/hohlubricant`;
+export let whatappLink = `https://whatsapp.com/channel/0029VaOAPpJ0bIdpEPB8jG0Y`;
 
 
 
