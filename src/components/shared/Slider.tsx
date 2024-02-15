@@ -7,6 +7,7 @@ const Slider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      console.log("slider is not working")
       nextSlide();
     }, 5000);
 
@@ -25,7 +26,7 @@ const Slider = () => {
 
   const heroStyle = {
     width: "100%",
-    backgroundImage: ` url(${slides[1]})`,
+    backgroundImage: ` url(${slides[current]})`,
     backgroundPosition: "center top",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
