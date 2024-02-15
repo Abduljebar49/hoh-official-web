@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { Product } from "../../config/constants";
 
 const card = ({ ...product }: Product) => {
+  const getGeneralDes = (desc: string) => {
+    if (desc.length < 120) return desc;
+    return desc.substring(0, 120) + "...";
+  };
+
   return (
     <>
       <div className="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
@@ -17,7 +22,7 @@ const card = ({ ...product }: Product) => {
         <div className="text-xl">{product.location}</div>
 
         <p className="font-light text-white text-sm md:text-md lg:text-lg mb-10">
-          {product.description}
+          {getGeneralDes(product.generalProfile)}
         </p>
 
         <Link
