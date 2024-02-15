@@ -7,7 +7,6 @@ const Slider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("slider is not working")
       nextSlide();
     }, 5000);
 
