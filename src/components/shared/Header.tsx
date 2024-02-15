@@ -44,7 +44,7 @@ const Header = ({ isMain }: HeaderProps) => {
     >
       <nav className="flex sm:flex-row flex-col items-center justify-center w-full h-full">
         <div className="flex items-center lg:w-96 w-full justify-between lg:mb-0 gap-5 h-full">
-          <div className="flex items-center gap-4">
+          <Link to={"/"} className="flex items-center gap-4">
             <img src={LogoO} className="w-8 h-13" alt="Logo" />
             <div
               className={`cursor-pointer lg:text-3xl md:text-2xl text-xl text-white font-bold ${
@@ -53,7 +53,7 @@ const Header = ({ isMain }: HeaderProps) => {
             >
               HOH Engine Oil
             </div>
-          </div>
+          </Link>
           <button
             className="cursor-pointer lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
             onClick={toggleShowMenu}
