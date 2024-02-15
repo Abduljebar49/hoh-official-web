@@ -45,8 +45,8 @@ export const Footer = () => {
           </div>
           <div className="flex flex-col lg:text-start text-center lg:justify-start justify-center">
             <div className="flex mr-1 text-white mb-4 lg:justify-start justify-center">Phone:</div>
-            {phoneNumber.map((ele: string) => (
-              <div className="flex flex-col ml-10 lg:text-start text-center">
+            {phoneNumber.map((ele: string,i:number) => (
+              <div key={i} className="flex flex-col ml-10 lg:text-start text-center">
                 <Link
                   to={`tel:${ele}`}
                   aria-label="Our phone"

@@ -171,8 +171,8 @@ const Contact = () => {
                   <p>Address 2</p>
                   <div className="flex flex-col">
                     <span className="text-red-400">Tel: </span>
-                    {phoneNumber.map((ele: string) => (
-                      <div className="flex ml-10">
+                    {phoneNumber.map((ele: string,i:number) => (
+                      <div className="flex ml-10" key={i}>
                         <Link
                           to={`tel:${ele}`}
                           aria-label="Our phone"
