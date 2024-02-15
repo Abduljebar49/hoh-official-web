@@ -1,19 +1,13 @@
 import { Img1, Img2, Img3 } from "../assets/images";
 import {
-  ATF,
   ATF1,
-  DisselEngine,
-  EngineOil,
   EngineOil1,
   EngineOil4,
   EngineOil5,
   EngineOil5r,
-  Gassoline,
   Gassoline1,
   Gassoline4,
   Gear,
-  Hydraulic,
-  Hydraulic68,
 } from "../assets/products";
 
 export const imgAddrss1 =
