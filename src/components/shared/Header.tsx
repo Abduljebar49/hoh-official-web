@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "../../assets/images";
 import { LogoO } from "../../assets/shared";
+import { FiMenu } from "react-icons/fi";
 
-interface HeaderProps {
-  isMain: boolean;
-}
-
-const Header = ({ isMain }: HeaderProps) => {
+const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);//#D7B867
+  const [activeTab, setActiveTab] = useState('Home');
 
   const toggleShowMenu = () => {
     setShowMenu(!showMenu);
@@ -23,7 +20,6 @@ const Header = ({ isMain }: HeaderProps) => {
     }
   };
 
-  // Add event listener for scroll
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -33,78 +29,64 @@ const Header = ({ isMain }: HeaderProps) => {
 
   return (
     <header
-      className={`sticky uppercase top-0 z-50 lg:px-10 p-2 bg-primary w-full h-full transition-all justify-between md:justify-center items-center ${
-        isSticky ? "h-auto" : "h-28"
-      }
-        ${showMenu ? "h-64" : ""}
+      className={`sticky uppercase top-0 z-50 lg:px-10 px-4 bg-primary w-full transition-all justify-between md:justify-center items-center 
+      ${isSticky ? "h-20 opacity-80" : showMenu ? "h-64" : "h-[132px]"}
       `}
       style={{
         boxShadow: isSticky ? "0 2px 4px rgba(0, 0, 0, 0.1)" : "none",
       }}
     >
-      <nav className="flex sm:flex-row flex-col items-center justify-center w-full h-full">
+      <nav className="flex sm:flex-row flex-col items-center justify-between w-full h-full">
         <div className="flex items-center lg:w-96 w-full justify-between lg:mb-0 gap-5 h-full">
           <Link to={"/"} className="flex items-center gap-4">
             <img src={LogoO} className="w-8 h-13" alt="Logo" />
             <div
-              className={`cursor-pointer lg:text-3xl md:text-2xl text-xl text-white font-bold ${
-                isMain ? "text-white" : "text-black"
-              }`}
+              className={`cursor-pointer lg:text-3xl md:text-2xl text-xl text-white font-extrabold
+                }`}
             >
               HOH Engine Oil
             </div>
           </Link>
           <button
-            className="cursor-pointer lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
+            className="cursor-pointer lg:hidden w-10 h-10 ml-auto flex items-center justify-center text-blue-500 rounded-md"
             onClick={toggleShowMenu}
           >
-            <img className="cursor-pointer p-2" src={Menu} alt="" />
+            <FiMenu width={25} height={25} className="text-default" />
           </button>
         </div>
 
-        <ul
-          className={`lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14 ${
-            !showMenu ? "hidden" : "flex"
-          }`}
-        >
-          <li
-            className={`font-semibold text-white hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
-              isMain ? "text-white" : "text-black"
-            }`}
-          >
-            <Link to="/">Home</Link>
-          </li>
-          <li
-            className={`font-semibold text-white hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0 ${
-              isMain ? "text-white" : "text-black"
-            }`}
-          >
-            <Link to="/about">About us</Link>
-          </li>
-          {showMenu && (
-            <li
-              className={`font-semibold text-white transition ease-in-out duration-300  ${
-                isMain ? "text-white" : "text-black"
-              }`}
-            >
-              <Link to="/contact">Contact us</Link>
-            </li>
-          )}
-        </ul>
-
         <div
-          className={`lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6 gap-6`}
+          className={`lg:flex flex-col w-full md:w-[450px] md:flex-row md:items-center text-center md:space-x-6 gap-6`}
         >
-          <Link
-            to="/contact"
-            className={`lg:inline hidden px-6 py-4 border-2 border-white-500 text-white font-semibold text-lg rounded-xl hover:bg-white-700 transition ease-linear duration-500 ${
-              isMain ? "text-white" : "text-white-500"
-            }
-              ${showMenu ? "inline" : ""}
-            `}
+          <ul
+            className={`lg:flex flex-col justify-center lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14 ${!showMenu ? "hidden" : "flex"
+              }`}
           >
-            Contact Us
-          </Link>
+            <li
+              className={`font-semibold  md:w-[51px] w-full hover:text-[#D7B867] transition ease-in-out duration-300 mb-5 lg:mb-0 
+              ${activeTab == 'Home' ? 'border-b-2 text-[#D7B867] border-b-[#D7B867]' : 'text-white'}
+              ${showMenu && activeTab == 'Home' ? 'border-2 bg-gray-50 text-black':''}
+              `}
+            >
+              <Link to="/" onClick={() => setActiveTab('Home')}>Home</Link>
+            </li>
+            <li
+              className={`font-semibold md:w-[83px] w-full hover:text-[#D7B867] transition ease-in-out duration-300 mb-5 lg:mb-0 
+              ${activeTab == 'About' ? 'border-b-2 text-[#D7B867] border-b-[#D7B867]' : 'text-white'}
+              ${showMenu && activeTab == 'About' ? 'border-2 bg-gray-50 text-black':''}
+              `}
+            >
+              <Link to="/about" onClick={() => setActiveTab('About')}>About us</Link>
+            </li>
+            <li
+              className={`font-semibold  md:w-[108px] w-full hover:text-[#D7B867] transition ease-in-out duration-300 mb-5 lg:mb-0 
+              ${activeTab == 'Contact' ? 'border-b-2 text-[#D7B867] border-b-[#D7B867]' : 'text-white'}
+              ${showMenu && activeTab == 'Contact' ? 'border-2 bg-gray-50 text-black':''}
+              `}
+            >
+              <Link to="/contact" onClick={() => setActiveTab('Contact')}>Contact Us</Link>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>

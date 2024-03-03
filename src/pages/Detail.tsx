@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { products } from "../config/constants";
 import { useParams } from "react-router-dom";
-import Header from "../components/shared/Header";
 
 const Detail = () => {
   let { id } = useParams();
@@ -9,7 +8,6 @@ const Detail = () => {
 
   return (
     <>
-      <Header isMain={false} />
       <div className="flex w-full container max-w-screen-xl mx-auto px-4 mb-20 text-white">
         <div className="flex flex-col w-full justify-center">
           <div className="flex justify-center w-full ">

@@ -5,6 +5,10 @@ export default {
     extend: {
       colors: {
         primary: "#333333",
+        default: "#D7B867"
+      },
+      fontFamily: {
+        work: ['Work Sans', 'sans-serif'],
       },
     },
   },

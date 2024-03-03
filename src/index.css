@@ -31,3 +31,7 @@ h3 {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}

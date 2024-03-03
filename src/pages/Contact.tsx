@@ -1,43 +1,37 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/product/PageHeader";
-import Header from "../components/shared/Header";
 import SocialMediaLinks from "../components/shared/SocialMediaLinks";
 import { phoneNumber } from "../config/constants";
-import { CSSTransition } from 'react-transition-group';
 
 const Contact = () => {
   return (
     <>
-      <div className="flex flex-col container max-w-screen-xl mx-auto px-4 bg-primary">
-        <Header isMain={false} />
+      <div className="flex flex-col bg-primary">
         <PageHeader title="Contact Us"></PageHeader>
-        <div className="bg-primary text-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="bg-primary text-white px-6 py-24 sm:py-32 lg:px-8 container max-w-screen-xl mx-auto">
           <div
             className="absolute inset-x-0 top-[-10rem] -z-10 sm:top-[-20rem]"
             aria-hidden="true"
           >
             <div className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"></div>
           </div>
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={300}
-            classNames="alert"
-          >
           <div className="flex flex-col lg:flex-row w-full">
-            <div className="flex flex-col w-full lg:w-2/3 justify-end">
+            <div className="flex flex-col w-full lg:w-2/3 px-10 justify-end">
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-white uppercase text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                <h2 className="text-white leading-10 uppercase text-[30px] tracking-tight text-white sm:text-4xl">
                   Get in touch
                 </h2>
-                <p className="text-white mt-2 text-lg leading-8 text-gray-600">
-                  add your information below
+                <div className="flex w-full justify-center">
+                  <div className="flex w-20 px-20 h-0.5 bg-[#D7B867] my-8"></div>
+                </div>
+                <p className="text-white mt-2 text-lg leading-8 text-gray-600 uppercase">
+                BENZOL LUBRICANTS – WE DEAL WITH A WIDE RANGE OF LUBRICANTS & GREASE
                 </p>
               </div>
               <form
                 action="#"
                 method="POST"
-                className="mx-auto mt-16 max-w-xl sm:mt-20"
+                className="mt-16"
               >
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
@@ -164,14 +158,14 @@ const Contact = () => {
               </form>
             </div>
             <div className="flex flex-col lg:w-1/3 w-full gap-10">
-              <div className="flex flex-col p-4 border-1 border-white border rounded-lg w-full gap-4">
+              <div className="flex flex-col p-4 border-2 border-[#D7B867] border rounded-lg w-full gap-4">
                 <p className="text-xl font-bold text-red-400">Ethiopia</p>
                 <div className="flex flex-col gap-2">
                   <p>Address 1</p>
                   <p>Address 2</p>
                   <div className="flex flex-col">
                     <span className="text-red-400">Tel: </span>
-                    {phoneNumber.map((ele: string,i:number) => (
+                    {phoneNumber.map((ele: string, i: number) => (
                       <div className="flex ml-10" key={i}>
                         <Link
                           to={`tel:${ele}`}
@@ -186,7 +180,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col p-4 border-1 border-white border rounded-lg w-full gap-3">
+              <div className="flex flex-col p-4 border-2 border-[#D7B867] border rounded-lg w-full gap-3">
                 <div className="flex">
                   <span className="text-red-400">Email: </span>&nbsp;
                   Abd@gmail.com
@@ -198,7 +192,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          </CSSTransition>
 
         </div>
       </div>

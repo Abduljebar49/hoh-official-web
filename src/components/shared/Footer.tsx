@@ -5,7 +5,6 @@ import { LogoN } from "../../assets/shared";
 
 export const Footer = () => {
   let date = new Date().getFullYear();
-
   const heroStyle = {
     width: "100%",
     backgroundImage: ` url(https://benzollubricants.de/wp-content/uploads/2021/01/bottle_bg.jpg)`,
@@ -13,9 +12,10 @@ export const Footer = () => {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   };
-  return (
+
+ return (
     <div
-      className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+      className="px-4 pt-16 lg:px-8"
       style={heroStyle}
     >
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
