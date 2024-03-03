@@ -25,7 +25,7 @@ const Contact = () => {
                   <div className="flex w-20 px-20 h-0.5 bg-[#D7B867] my-8"></div>
                 </div>
                 <p className="text-white mt-2 text-lg leading-8 text-gray-600 uppercase">
-                BENZOL LUBRICANTS – WE DEAL WITH A WIDE RANGE OF LUBRICANTS & GREASE
+                HOH LUBRICANT LUBRICANTS – WE DEAL WITH A WIDE RANGE OF LUBRICANTS & GREASE
                 </p>
               </div>
               <form
