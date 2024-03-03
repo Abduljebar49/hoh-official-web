@@ -9,7 +9,7 @@ const About = () => {
       <div className="flex flex-col w-full justify-center">
         <PageHeader title="About Us"></PageHeader>
         <div className="flex w-full justify-center container max-w-screen-xl mx-auto py-[5%]">
-          <div className="flex w-full flex-col justify-center gap-10">
+          <div className="flex w-full flex-col justify-center gap-10 px-8">
             <div className="text-white flex flex-col w-full justify-center rounded-lg border-[#D7B867] border-2 py-[5%]">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:px-10 px-6">
                 <div className="flex flex-col gap-4 md:pl-4 pt-2 text-[#D7B867] text-3xl">
