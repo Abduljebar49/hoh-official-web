@@ -40,6 +40,8 @@ export const phoneNumber = [
   "+251 97 234 4444",
 ];
 
+export const email = "QALLOBUSINESSGROUP11@GMAIL.COM"
+
 export const slides = [Img2, Img3];
 
 // const sliderImages = ["1.jpg", "2.jpg", "3.jpg"];

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { phoneNumber } from "../../config/constants";
+import { email, phoneNumber } from "../../config/constants";
 import SocialMediaLinks from "./SocialMediaLinks";
 import { LogoN } from "../../assets/shared";
 
@@ -13,11 +13,8 @@ export const Footer = () => {
     backgroundSize: "cover",
   };
 
- return (
-    <div
-      className="px-4 pt-16 lg:px-8"
-      style={heroStyle}
-    >
+  return (
+    <div className="px-4 pt-16 lg:px-8" style={heroStyle}>
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 flex flex-col lg:justify-start justify-center">
           <Link
@@ -44,9 +41,14 @@ export const Footer = () => {
             Contacts
           </div>
           <div className="flex flex-col lg:text-start text-center lg:justify-start justify-center">
-            <div className="flex mr-1 text-white mb-4 lg:justify-start justify-center">Phone:</div>
-            {phoneNumber.map((ele: string,i:number) => (
-              <div key={i} className="flex flex-col ml-10 lg:text-start text-center">
+            <div className="flex mr-1 text-white mb-4 lg:justify-start justify-center">
+              Phone:
+            </div>
+            {phoneNumber.map((ele: string, i: number) => (
+              <div
+                key={i}
+                className="flex flex-col ml-10 lg:text-start text-center"
+              >
                 <Link
                   to={`tel:${ele}`}
                   aria-label="Our phone"
@@ -61,12 +63,12 @@ export const Footer = () => {
           <div className="flex lg:justify-start justify-center">
             <p className="mr-1 text-white">Email:</p>
             <a
-              href="mailto:info@lorem.mail"
+              href={`mailto:${email}`}
               aria-label="Our email"
               title="Our email"
               className="text-white transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              info@lorem.mail
+              {email}
             </a>
           </div>
           <div className="flex lg:justify-start justify-center">

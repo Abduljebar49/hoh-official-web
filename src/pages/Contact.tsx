@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/product/PageHeader";
 import SocialMediaLinks from "../components/shared/SocialMediaLinks";
-import { phoneNumber } from "../config/constants";
+import { email, phoneNumber } from "../config/constants";
 
 const Contact = () => {
   return (
@@ -183,7 +183,7 @@ const Contact = () => {
               <div className="flex flex-col p-4 border-2 border-[#D7B867] border rounded-lg w-full gap-3">
                 <div className="flex">
                   <span className="text-red-400">Email: </span>&nbsp;
-                  Abd@gmail.com
+                  {email}
                 </div>
                 <div className="flex">
                   <span className="text-red-400">Website: </span>&nbsp;
